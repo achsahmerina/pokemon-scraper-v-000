@@ -24,7 +24,7 @@ attr_accessor :id, :name, :type, :db, :hp
     name = db.execute("SELECT name FROM pokemon WHERE id = #{id}").flatten[0]
     type = db.execute("SELECT type FROM pokemon WHERE id = #{id}").flatten[0]
     hp = db.execute("SELECT hp FROM pokemon WHERE id = #{id}").flatten[0]
-    pokemonvalues = {id: id, name: name, type: type, hp: hp, db: db}
+    pokemonvalues = {id: id, name: name, type: type, db: db, hp: hp}
 
     pokemonobject = Pokemon.new(pokemonvalues)
   end
