@@ -33,5 +33,4 @@ attr_accessor :id, :name, :type, :hp, :db
     db.execute("SELECT hp FROM UPDATE pokemon SET hp = #{new_hp} WHERE id = #{self.id}")
   end
 
-
 end
